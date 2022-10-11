@@ -1,0 +1,29 @@
+.site-footer {
+	padding: 130px 0 230px;
+	overflow: hidden;
+
+	.shape-grid {
+		bottom: 0;
+		right: 0;
+		transform: translate(25%, 25%);
+
+		img {
+			max-width: 50vw;
+		}
+	}
+
+	.section-title {
+		margin: 0 0 71px;
+	}
+}
+
+.footer-event-info {
+	font-size: 20px;
+	margin: 0 0 22px;
+}
+
+@include media-breakpoint-down(sm) {
+	.site-footer {
+		padding: 70px 0 100px;
+	}
+}

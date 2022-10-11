@@ -1,0 +1,64 @@
+.section-about {
+	.section-description {
+		max-width: 400px;
+	}
+
+	.section-title-with-icon {
+		margin: 14px 0 0;
+	}
+
+	.branding {
+		text-align: center;
+
+		svg {
+			display: inline-block;
+			width: 230px;
+			height: 230px;
+		}
+	}
+
+	.row-branding-desc{
+		margin-top: 41px;
+	}
+}
+
+.event-info {
+	font-size: 20px;
+	margin: 30px 0 0;
+}
+
+.register-button {
+	margin: 30px 0 0;
+}
+
+@include media-breakpoint-down(sm) {
+	.section-about {
+		text-align: center;
+
+		.section-title-with-icon {
+			margin: 0 0 10px;
+			justify-content: center;
+		}
+
+		.section-title {
+			text-align: center;
+		}
+
+		.section-description {
+			text-align: center;
+			margin: 30px auto 0;
+		}
+
+		.event-info {
+			text-align: center;
+		}
+	}
+
+	.row-branding-desc {
+		.branding {
+			img {
+				max-width: 33vw;
+			}
+		}
+	}
+}
