@@ -1,12 +1,18 @@
 .section-hero {
-	padding: 165px 0 66px;
+	.section-content {
+		display: flex;
+		align-items: center;
+		padding: 80px 0;
+		min-height: 800px;
+	}
 }
 
 .hero-title {
-	font-size: 44px;
+	font-size: 58px;
 	line-height: 1.25;
-	margin: 0 0 11px;
+	margin: 0 0 28px;
 	text-transform: none;
+	text-shadow: 0 0 5px rgba(0, 0, 0, .2);
 
 	mark {
 		color: $primary-color;
@@ -14,7 +20,9 @@
 }
 
 .hero-sub-title {
-	margin: 0 0 17px;
+	font-size: 32px;
+	margin: 0 0 10px;
+	line-height: 1.25;
 }
 
 .hero-event-info {
@@ -25,6 +33,10 @@
 	line-height: 26px;
 	margin: 97px 0 0;
 	padding: 0;
+	position: absolute;
+	bottom: 65px;
+	left: var(--bs-gutter-x);
+	right: var(--bs-gutter-x);
 
 	li {
 		list-style-type: none;
@@ -80,13 +92,24 @@
 
 @media screen and(max-width: 1199px) {
 	.section-hero {
-		padding: 60px 0 65px;
+		.section-content {
+			min-height: 0;
+
+			.hero-event-info {
+				position: static;
+			}
+		}
 	}
 }
 
 @include media-breakpoint-down(sm) {
+	.hero-sub-title {
+		font-size: 26px;
+		margin: 0 0 12px;
+	}
+
 	.hero-title {
-		font-size: 32px;
+		font-size: 44px;
 	}
 
 	.hero-event-info {
@@ -96,5 +119,16 @@
 	.shape-hero-drum {
 		top: 35%;
 		left: 46%;
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.hero-sub-title {
+		font-size: 24px;
+		margin: 0 0 12px;
+	}
+
+	.hero-title {
+		font-size: 36px;
 	}
 }
