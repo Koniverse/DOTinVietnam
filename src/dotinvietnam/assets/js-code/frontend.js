@@ -12,6 +12,19 @@
 			initVideoPopups();
 			initSliders();
 
+			var $readmore = $( '.project-excerpt' ),
+			    $swiper   = $readmore.closest( '.tm-swiper' );
+
+			new Readmore( $readmore, {
+				moreLink: '<a href="#" class="btn btn-flat btn-small">Read more...</a>',
+				lessLink: '<a href="#" class="btn btn-flat btn-small">Read less</a>',
+				afterToggle: function( trigger, element, expanded ) {
+					/*if ( $tabPanel.length > 0 ) {
+						$tabPanel.MinimogTabPanel( 'updateLayout' );
+					}*/
+				}
+			} );
+
 			if ( ! isHandheld() ) {
 				var cursor = $( "#custom-cursor" );
 

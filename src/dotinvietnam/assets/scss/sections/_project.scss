@@ -6,6 +6,13 @@
 	.section-title-with-icon {
 		margin: 0 0 102px;
 	}
+
+	.btn {
+		width: auto !important;
+		display: inline-block !important;
+		color: #fff;
+		padding: 0;
+	}
 }
 
 .project-name {
@@ -15,12 +22,19 @@
 	margin: 0 0 28px;
 }
 
+.project-excerpt-wrap {
+	margin: 0 0 28px;
+}
+
 .project-excerpt {
+	margin: 0;
 	font-size: 20px;
-	line-height: 1.4;
 	color: #6d6f8a;
 	font-weight: 500;
-	margin: 0 0 28px;
+	visibility: visible;
+	overflow: hidden;
+	line-height: 28px;
+	max-height: 140px; // Line height x lines.
 }
 
 .btn-view-project {
