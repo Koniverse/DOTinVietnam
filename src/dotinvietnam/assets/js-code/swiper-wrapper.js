@@ -158,7 +158,6 @@
 				if ( sliderSettings.nav ) {
 
 					if ( sliderSettings.customNav && sliderSettings.customNav !== '' ) {
-						console.log(sliderSettings.customNav);
 						var $customBtn = $( '#' + sliderSettings.customNav );
 						var $fractionWrapper = $( '.pagination-wrapper', $customBtn );
 						var $swiperPrev = $customBtn.find( '.slider-prev-btn' );
