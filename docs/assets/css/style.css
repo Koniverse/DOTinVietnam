@@ -5306,6 +5306,113 @@ body {
   }
 }
 
+.section-video-intro {
+  padding: 100px 0;
+}
+
+.section-video-intro .intro-event-info {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 26px;
+  margin: 33px 0 0;
+  padding: 0;
+}
+
+.section-video-intro .intro-event-info li {
+  list-style-type: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 15px 40px 0 0;
+}
+
+.section-video-intro .intro-event-info li:last-child {
+  margin: 15px 0 0 !important;
+}
+
+.section-video-intro .intro-event-info svg {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin: 0 12px 0 0;
+}
+
+.section-video-intro .intro-sub-title {
+  margin: 0 0 10px;
+}
+
+.section-video-intro .intro-title {
+  font-size: 58px;
+  text-transform: none;
+  font-weight: 700;
+  margin: 0;
+}
+
+.section-video-intro .section-call-out-action {
+  margin: 50px 0 0;
+}
+
+.block-video-intro {
+  font-size: 0;
+  line-height: 1;
+}
+
+.block-video-intro video {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .section-video-intro {
+    padding: 80px 0;
+  }
+  .section-video-intro .intro-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-video-intro {
+    padding: 70px 0;
+  }
+  .section-video-intro .intro-title {
+    font-size: 40px;
+  }
+  .section-video-intro .intro-event-info {
+    margin: 20px 0 0;
+  }
+  .section-video-intro .intro-image {
+    margin: 0 0 20px;
+  }
+  .section-video-intro .intro-image img {
+    max-width: 50vw;
+  }
+}
+
+@media (max-width: 543px) {
+  .section-video-intro {
+    padding: 50px 0 60px;
+  }
+  .section-video-intro .intro-sub-title {
+    font-size: 24px;
+  }
+  .section-video-intro .intro-title {
+    font-size: 32px;
+  }
+  .section-video-intro .intro-event-info {
+    margin: 20px 0 0;
+  }
+  .section-video-intro .intro-image {
+    margin: 0 0 20px;
+  }
+  .section-video-intro .intro-image img {
+    max-width: 50vw;
+  }
+}
+
 .section-hero .section-content {
   display: -webkit-box;
   display: -webkit-flex;
