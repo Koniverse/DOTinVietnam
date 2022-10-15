@@ -1,0 +1,10 @@
+.grid-modern {
+	--grid-columns: 3;
+	--grid-row-gap: 30px;
+	--grid-column-gap: 30px;
+
+	display: grid;
+	grid-template-columns: repeat( var(--grid-columns), minmax(0, 1fr));
+	column-gap: var(--grid-column-gap);
+	row-gap: var(--grid-row-gap);
+}
