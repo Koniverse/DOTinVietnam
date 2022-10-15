@@ -24,18 +24,15 @@ gulp.task( 'sass:full', function() {
 	return gulp.src( paths.sass.generate )
 	           .pipe( $.plumber( { errorHandler: reportError } ) )
 	           .pipe( $.sourcemaps.init() )
-	           .pipe( $.sass( { outputStyle: 'expanded' } ) )
+	           .pipe( $.sass() )
 	           .pipe( $.postcss( processors.modules ) )
 	           .pipe( $.stripCssComments() )
+	           .pipe( $.cssnano( processors.nano ) )
 	           .pipe( $.lineEndingCorrector() )
 	           .pipe( gulp.dest( paths.sass.dist ) )
-	           .pipe( $.rename( { suffix: '.min' } ) )
-	           .pipe( $.cssnano( processors.nano ) )
 	           .pipe( $.sourcemaps.write( 'sourcemap/', {
 		           addComment: false,
 		           includeContent: false,
 		           sourceRoot: '../scss/'
-	           } ) )
-	           .pipe( $.lineEndingCorrector() )
-	           .pipe( gulp.dest( paths.sass.dist ) );
+	           } ) );
 } );
