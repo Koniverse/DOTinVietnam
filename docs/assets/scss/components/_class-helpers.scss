@@ -1,83 +1,107 @@
 .row--align-top {
-    align-items: flex-start;
+	align-items: flex-start;
 }
 
 .row--align-center {
-    align-items: center;
+	align-items: center;
 }
 
 .row--align-bottom {
-    align-items: flex-end;
+	align-items: flex-end;
 }
 
 .row--align-stretch {
-    align-items: stretch;
+	align-items: stretch;
 }
 
 .column-content-middle {
-    > [class*='col-'] {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+	> [class*='col-'] {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 
 .primary-color {
-    color: $primary-color;
+	color: $primary-color;
 }
 
 .primary-color-dark {
-    color: $primary-color-darken;
+	color: $primary-color-darken;
 }
 
 .list-no-style {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 
-    li {
-        list-style: none;
-    }
+	li {
+		list-style: none;
+	}
 }
 
 .list-inline {
-    li {
-        margin: 0;
-    }
+	li {
+		margin: 0;
+	}
 }
 
 .text-center {
-    text-align: center;
+	text-align: center;
 }
 
 .text-left {
-    text-align: start;
+	text-align: start;
 }
 
 .text-right {
-    text-align: end;
+	text-align: end;
 }
 
 .text-line-through {
-    text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .text-gradient {
-    display: inline-block;
-    background: linear-gradient(to right, $primary-color 0%, $primary-color-darken 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	display: inline-block;
+	background: linear-gradient(to right, $primary-color 0%, $primary-color-darken 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .text-stoke {
-    color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #fff;
+	color: transparent;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #fff;
 }
 
 .heading-black {
-    font-weight: 900;
+	font-weight: 900;
 }
 
 .text-color {
-    color: #6D6F8A;
+	color: #6d6f8a;
+}
+
+.embed-responsive {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	padding: 0;
+	height: 0;
+	border-radius: 5px;
+	margin: 0;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+}
+
+.embed-responsive-16by9 {
+	padding-bottom: 56.25%;
 }
