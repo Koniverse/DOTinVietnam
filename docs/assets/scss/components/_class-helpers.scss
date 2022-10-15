@@ -108,11 +108,11 @@
 }
 
 .video-frame {
-	border: var(--border-size, 10px) solid $primary-color;
+	border: var(--border-size, 3px) solid $primary-color;
 }
 
-@include media-breakpoint-down(sm) {
+/*@include media-breakpoint-down(sm) {
 	.video-frame {
 		--border-size: 6px;
 	}
-}
+}*/
