@@ -1,40 +1,32 @@
 'use strict';
-var glob      = require( 'glob' ),
-    files     = glob( 'src/*', { sync: true } ),
-    mainTheme = files[ 0 ].replace( 'src/', '' );
 
 module.exports = {
-	mainTheme: mainTheme,
-	taskDone: [
-		'src/**/*.php',
-		'gulp/**/*.js'
-	],
 	root: {
-		main: 'src/' + mainTheme + '/'
+		main: 'docs' + '/'
 	},
 	javascript: {
-		src: 'src/' + mainTheme + '/assets/js-code/**/*.js',
-		dist: 'src/' + mainTheme + '/assets/js/'
+		src: 'docs' + '/assets/js-code/**/*.js',
+		dist: 'docs/assets/js/'
 	},
 	sass: {
 		watch: [
-			'src/' + mainTheme + '/assets/scss/**/*.scss'
+			'docs/assets/scss/**/*.scss'
 		],
 		generate: [
-			'src/' + mainTheme + '/assets/scss/*.scss'
+			'docs/assets/scss/*.scss'
 		],
-		dist: 'src/' + mainTheme + '/assets/css/'
+		dist: 'docs/assets/css/'
 	},
 	bs: {
 		main: [
-			'src/' + mainTheme + '/*.html',
-			'src/' + mainTheme + '/assets/css/*.css',
-			'src/' + mainTheme + '/assets/js/*.js',
-			'src/' + mainTheme + '/assets/libs/**/**/*.js'
+			'docs/*.html',
+			'docs/assets/css/*.css',
+			'docs/assets/js/*.js',
+			'docs/assets/libs/**/**/*.js'
 		],
 	},
 	linting: {
-		js: 'src/' + mainTheme + '/assets/js-code/',
-		scss: 'src/' + mainTheme + '/assets/scss/**/*.scss',
+		js: 'docs/assets/js-code/',
+		scss: 'docs/assets/scss/**/*.scss',
 	}
 };

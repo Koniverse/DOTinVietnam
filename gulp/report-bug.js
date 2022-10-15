@@ -1,7 +1,7 @@
 'use strict';
 var $         = require( 'gulp-load-plugins' )(),
     log       = require( 'fancy-log' ),
-    mainTheme = require( './paths' ).mainTheme;
+    mainTheme = require( './paths' ).root.main;
 
 module.exports = function( error ) {
 	$.notify( {
