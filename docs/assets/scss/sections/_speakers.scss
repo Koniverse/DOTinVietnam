@@ -48,6 +48,13 @@
 	margin: 16px 0 0;
 }
 
+.speaker-company {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: right;
+}
+
 .grid-speakers {
 	--offset: 43px;
 	display: flex;
@@ -102,6 +109,10 @@
 	.speaker-job {
 		font-size: 16px;
 		margin: 10px 0 0;
+	}
+
+	.speaker-company {
+		font-size: 16px;
 	}
 }
 
