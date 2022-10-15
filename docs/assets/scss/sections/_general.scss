@@ -26,25 +26,25 @@
 		transform: rotate(0deg) scale(1, 1);
 	}
 	12.5% {
-		transform: rotate(36deg) scale(.8,.8);
+		transform: rotate(36deg) scale(.8, .8);
 	}
 	25% {
 		transform: rotate(72deg) scale(1, 1);
 	}
 	37.5% {
-		transform: rotate(108deg) scale(.8,.8);
+		transform: rotate(108deg) scale(.8, .8);
 	}
 	50% {
 		transform: rotate(144deg) scale(1, 1);
 	}
 	62.5% {
-		transform: rotate(180deg) scale(.8,.8);
+		transform: rotate(180deg) scale(.8, .8);
 	}
 	75% {
 		transform: rotate(216deg) scale(1, 1);
 	}
 	87.5% {
-		transform: rotate(288deg) scale(.8,.8);
+		transform: rotate(288deg) scale(.8, .8);
 	}
 	to {
 		transform: rotate(360deg) scale(1, 1);
@@ -158,6 +158,12 @@
 
 		&:hover {
 			color: $primary-color;
+		}
+	}
+
+	svg {
+		*:not([fill='none']) {
+			fill: currentColor;
 		}
 	}
 }

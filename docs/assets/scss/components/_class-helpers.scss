@@ -90,6 +90,7 @@
 	height: 0;
 	border-radius: 5px;
 	margin: 0;
+	background: #262945;
 
 	iframe {
 		position: absolute;
@@ -104,4 +105,14 @@
 
 .embed-responsive-16by9 {
 	padding-bottom: 56.25%;
+}
+
+.video-frame {
+	border: var(--border-size, 10px) solid $primary-color;
+}
+
+@include media-breakpoint-down(sm) {
+	.video-frame {
+		--border-size: 6px;
+	}
 }
