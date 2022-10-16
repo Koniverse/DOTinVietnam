@@ -1,0 +1,141 @@
+.section-speakers {
+	.section-title-with-icon {
+		margin: 0;
+	}
+
+	.section-title {
+		text-align: end;
+	}
+}
+
+.speaker-avatar {
+	position: relative;
+
+	.avatar {
+		overflow: hidden;
+	}
+
+	img {
+		transition: transform 1.1s cubic-bezier(.15, .75, .5, 1);
+	}
+}
+
+.speaker-name {
+	transition: transform 1.1s cubic-bezier(.15, .75, .5, 1);
+	position: absolute;
+	bottom: 20px;
+	left: calc(-1 * var(--offset));
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 1.25;
+	margin: 0;
+
+	mark {
+		display: block;
+		color: inherit;
+		-webkit-text-fill-color: rgba(0, 0, 0, 0);
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: currentColor;
+	}
+}
+
+.speaker-job {
+	display: block;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 28px;
+	text-align: end;
+	margin: 16px 0 0;
+}
+
+.speaker-company {
+	margin: 3px 0 0;
+	display: block;
+	font-size: 22px;
+	font-weight: 700;
+	text-align: right;
+}
+
+.grid-speakers {
+	--offset: 43px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 92px auto 0;
+	max-width: 934px;
+
+	.speaker {
+		padding: 0 0 0 var(--offset);
+		margin: 0 15px 20px;
+		width: calc(var(--offset) + 350px);
+		max-width: calc(50% - 30px);
+
+		&:nth-child(2n) {
+			margin-top: 144px;
+		}
+
+		&:hover {
+			.speaker-avatar {
+				img {
+					transform: scale3d(1.1, 1.1, 1.1) translateZ(0);
+				}
+			}
+
+			.speaker-name {
+				transform: translateY(-20px);
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.speaker-name {
+		font-size: 32px;
+	}
+
+	.section-speakers {
+		.section-title-with-icon {
+			margin: 0 0 5px;
+		}
+
+		.section-title {
+			text-align: left;
+		}
+	}
+
+	.grid-speakers {
+		margin: 45px auto 0;
+		--offset: 30px;
+	}
+
+	.speaker-job {
+		font-size: 16px;
+		margin: 10px 0 0;
+	}
+
+	.speaker-company {
+		font-size: 18px;
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.grid-speakers {
+		--offset: 40px;
+
+		.speaker {
+			margin: 0;
+			width: 100%;
+			max-width: 100%;
+
+			+ .speaker {
+				margin: 35px 0 0 !important;
+			}
+		}
+
+		.speaker-avatar {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
