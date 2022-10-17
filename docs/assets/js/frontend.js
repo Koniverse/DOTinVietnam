@@ -335,12 +335,26 @@
 					} );
 				} );
 			}
+
+			var $slider = $( '#slider-projects' );
+			var swiper = $slider.find( '.swiper-container' ).get( 0 ).swiper;
+			swiper.on( 'slideChange', function() {
+				var videos = swiper.$wrapperEl.find( '.swiper-slide iframe' );
+				stopAllYouTubeVideos( videos );
+			} );
 		} );
 
 		$window.on( 'load', function() {
 			handlerEntranceAnimation();
 			handlerEntranceQueueAnimation();
 		} );
+
+		function stopAllYouTubeVideos( videos ) {
+			videos.each( function( i, video ) {
+				var src = video.src;
+				video.src = src;
+			} );
+		}
 
 		function handlerEntranceAnimation() {
 			var $animations = $body.find( '.tm-animation' );
